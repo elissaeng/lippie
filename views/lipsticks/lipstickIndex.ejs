@@ -11,6 +11,19 @@
 <body>
     <main>
         <h1>Lipstick Project One</h1>
+
+        <ul>
+            <% for (let i=0; i < allLipsticks.length; i++) { %>
+                <li>
+                    <a href="/lipsticks/<%= allLipsticks[i]._id %>">
+                        <%= allLipsticks[i].lipstickName %>
+                    </a>
+                </li>
+                <% } %>
+        </ul>
+
+
+
     </main>
 </body>
 
