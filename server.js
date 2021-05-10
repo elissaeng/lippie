@@ -1,3 +1,4 @@
+const { response } = require('express');
 const express = require('express');
 const app = express();
 const PORT = 4000;
@@ -18,7 +19,7 @@ app.get('/', (req, res) => {
 
 // index route
 app.get('/lipsticks', (req, res) => {
-    db.Lipstick.find( {}, (err, lipsticks) =>  {
+    db.Lipstick.find({}, (err, lipsticks) => {
         if (err) {
             return console.log(err)
         } console.log(lipsticks)
@@ -31,6 +32,27 @@ app.get('/lipsticks', (req, res) => {
 });
 
 
+// //Create Route to create/add new lipstick
+// app.post('/lipsticks/lipstickNew.ejs', (req, res) => {
+//     if (err) {
+//         return console.log(err);
+//     }
+// });
+
+// db.Lipstick.create(request.body, (err, newLipstick) => {
+//     if (err) {
+//         return console.log(err);
+//     }
+//     console.log(newLipstick);
+
+//     response.redirect('/lipsticks');
+// });
+
+
+//To show a form to the user/admin to add new lipstick
+app.get('/lipsticks/lipstickNew.ejs', (req, res) => {
+    response.render('lipstickNew.ejs');
+});
 
 
 app.listen(PORT, () => {
