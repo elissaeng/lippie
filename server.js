@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
 //     res.send('<h1>Lipstick Name</h1>');
 // });
 
+app.get('/lipsticks', (req, res) => {
+    res.render('lipsticks/lipstickIndex.ejs');
+});
+
 
 
 app.listen(PORT, () => {
