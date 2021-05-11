@@ -8,8 +8,8 @@ const mongoose = require("mongoose");
 
 
 const lipstickSchema = new mongoose.Schema({
-    image: String,
     lipstickName: String,
+    image: String,
     description: String,
     shades: String,
     ingredients: String,

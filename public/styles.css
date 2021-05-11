@@ -1,0 +1,27 @@
+/* .main {
+  position: center;
+  
+} */
+
+header  {
+  background-color: rgb(185, 180, 180);
+}
+
+body {
+  background-color: pink;
+  text-align: center;
+}
+
+.info {
+  text-align: left;
+  position: relative;
+  bottom: -300px;
+}
+
+.products {
+  text-align: left;
+}
+
+.shopping-bag {
+  text-align: right;
+}
