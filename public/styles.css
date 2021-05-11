@@ -5,11 +5,23 @@
 
 header  {
   background-color: rgb(185, 180, 180);
+  padding: 10px;
 }
 
 body {
   background-color: pink;
   text-align: center;
+}
+
+.main {
+  background-image: url("https://i2.wp.com/i.pinimg.com/originals/2f/9b/57/2f9b5739833df118a4fe09e782a96e32.jpg");
+  background-repeat: no-repeat;
+  border: solid 5px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 600px;
+    height: 550px;
+    margin: 140px;
 }
 
 .info {
@@ -24,6 +36,9 @@ body {
 
 .shopping-bag {
   text-align: right;
+  position: relative;
+  bottom: 40px;
+
 }
 
 .product-page {
@@ -35,3 +50,14 @@ body {
 ul {
   list-style: none;
 }
+
+.followus {
+  top: 450px;
+  position: relative;
+  text-align: center;
+}
+
+/* .aboutus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
