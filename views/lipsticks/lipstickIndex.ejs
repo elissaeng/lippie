@@ -18,8 +18,13 @@
                     <a href="/lipsticks/<%= allLipsticks[i]._id %>">
                         <%= allLipsticks[i].lipstickName %>
                     </a>
-                    <button type="submit">Delete</button>
                     
+                    <form 
+                        style="display: inline"
+                        action="/lipsticks/<%= allLipsticks[i]._id %>?_method=DELETE&name" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+
 					<a href="/lipsticks/<%= allLipsticks[i]._id %>/edit">
                     <button type="edit">Edit</button>
                     </a>

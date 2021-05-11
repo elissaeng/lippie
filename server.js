@@ -93,6 +93,17 @@ app.put('/lipsticks/:id', (req, res) => {
 });
 
 
+// Delete Fruit
+    app.delete('/lipsticks/:id', (req, res) => {
+        db.Lipstick.findByIdAndDelete(req.params.id, (err, deletedLipstick) => {
+            if (err) {
+                return console.log(err);
+            }
+            res.redirect('/lipsticks');
+        })
+    })
+
+
 app.listen(PORT, () => {
     console.log(`Our app listening at http://localhost:${PORT}`)
 });
