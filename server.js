@@ -39,7 +39,7 @@ app.get('/lipsticks', (req, res) => {
 
 //Create Route to create/add new lipstick
 app.post('/lipsticks', (req, res) => {
-
+    console.log(req.body)
     db.Lipstick.create(req.body, (err, newLipstick) => {
         if (err) {
             return console.log(err);
@@ -61,7 +61,7 @@ app.get('/lipsticks/:id', (req, res) => {
     db.Lipstick.findById(req.params.id, (err, yayLipstick) => {
         if (err) {
             return console.log(err)
-        }
+        } console.log(yayLipstick)
         res.render('lipsticks/lipstickShow', { lipstick: yayLipstick })
     });
 });

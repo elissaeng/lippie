@@ -21,12 +21,33 @@
     
     <form action="/lipsticks" method="POST">
         <div>
-            <label for="lipstick-name">Name: </label>
+            <label for="lipstick-name">Name:</label>
             <input type="text" id="lipstick-name" name="lipstickName" />
         </div>
+        
         <div>
-            <label for="shades">Shade: </label>
-            <input type="text" id="shades-name" name="shadesName" />
+            <label for="shades">Shade:</label>
+            <input type="text" id="shades" name="shades" />
+        </div>
+
+        <div>
+          <label for="description">Description:</label>
+          <input type="text" name="description" id="description">
+        </div>
+
+        <div>
+          <label for="ingredients">Ingredients:</label>
+          <input type="text" name="ingredients" id="ingredients">
+        </div>
+
+        <div>
+          <label for="applicationTechniques">Application Techniques:</label>
+          <input type="text" name="applicationTechniques" id="applicationTechniques">
+        </div>
+
+        <div>
+          <label for="price">Price:</label>
+          <input type="text" name="price" id="price">
         </div>
 
         <button type="submit">Submit</button>

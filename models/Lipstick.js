@@ -13,7 +13,7 @@ const lipstickSchema = new mongoose.Schema({
     description: String,
     shades: String,
     ingredients: String,
-    applicationTechnique: String,
+    applicationTechniques: String,
     price: Number
 })
 
