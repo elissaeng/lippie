@@ -25,3 +25,13 @@ body {
 .shopping-bag {
   text-align: right;
 }
+
+.product-page {
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+ul {
+  list-style: none;
+}
