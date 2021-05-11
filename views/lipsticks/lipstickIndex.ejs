@@ -19,6 +19,10 @@
                         <%= allLipsticks[i].lipstickName %>
                     </a>
                     <button type="submit">Delete</button>
+                    
+					<a href="/lipsticks/<%= allLipsticks[i]._id %>/edit">
+                    <button type="edit">Edit</button>
+                    </a>
                 </li>
             <% } %>
         </ul>

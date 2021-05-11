@@ -60,16 +60,24 @@ app.get('/lipsticks/new', (req, res) => {
 app.get('/lipsticks/:id', (req, res) => {
     db.Lipstick.findById(req.params.id, (err, yayLipstick) => {
         if (err) {
-            return console.log(err)
-        } console.log(yayLipstick)
+            return console.log(err);
+        } console.log(yayLipstick);
         res.render('lipsticks/lipstickShow', { lipstick: yayLipstick })
     });
 });
 
+// Edit Lipstick
+app.get('/lipsticks/:id/edit', (req, res) => {
+    db.Lipstick.findById(req.params.id, (err, lipstickToEdit) => {
+        if (err) {
+            return console.log(err);
+        }
+        res.render('lipsticks/lipstickEdit', { lipstick: lipstickToEdit });
+    });
+});
 
 
-
-//Update lipstick list to the product page
+// Update lipstick list to the product page
 app.put('/lipsticks/:id', (req, res) => {
     db.Lipstick.findByIdAndUpdate(
         req.params.id,
