@@ -10,7 +10,14 @@
 
 <body>
     <main>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/lipsticks/new">Create New Lipstick</a></li>
+            </ul>
+        </nav>
         <h1>Lipsticks</h1>
+
 
         <ul>
             <% for (let i=0; i < allLipsticks.length; i++) { %>
@@ -18,18 +25,17 @@
                     <a href="/lipsticks/<%= allLipsticks[i]._id %>">
                         <%= allLipsticks[i].lipstickName %>
                     </a>
-                    
-                    <form 
-                        style="display: inline"
-                        action="/lipsticks/<%= allLipsticks[i]._id %>?_method=DELETE&name" method="POST">
+
+                    <form style="display: inline" action="/lipsticks/<%= allLipsticks[i]._id %>?_method=DELETE&name"
+                        method="POST">
                         <button type="submit">Delete</button>
                     </form>
 
-					<a href="/lipsticks/<%= allLipsticks[i]._id %>/edit">
-                    <button type="edit">Edit</button>
+                    <a href="/lipsticks/<%= allLipsticks[i]._id %>/edit">
+                        <button type="edit">Edit</button>
                     </a>
                 </li>
-            <% } %>
+                <% } %>
         </ul>
 
 

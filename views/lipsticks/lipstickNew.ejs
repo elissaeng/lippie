@@ -2,57 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Lipstick</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Lipstick</title>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/lipsticks">Lipsticks</a></li>
-            <li><a href="/lipsticks/lipstickNew">Create/Add New Lipstick</a></li>
-        </ul>
-    </nav>
-    <h4 class="products"><a href="/lipsticks">PRODUCTS</a></h4>
-    <h4 class="shopping-bag">SHOPPING BAG</h4>
-    <h1>Create New Lipstick</h1>
-    
-    <form action="/lipsticks" method="POST">
-        <div>
-            <label for="lipstick-name">Name:</label>
-            <input type="text" id="lipstick-name" name="lipstickName" />
-        </div>
-        
-        <div>
-            <label for="shades">Shade:</label>
-            <input type="text" id="shades" name="shades" />
-        </div>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/lipsticks">Lipsticks</a></li>
+    </ul>
+  </nav>
+  <h4 class="products"><a href="/lipsticks">PRODUCTS</a></h4>
+  <h4 class="shopping-bag">SHOPPING BAG</h4>
+  <h1>Create New Lipstick</h1>
 
-        <div>
-          <label for="description">Description:</label>
-          <input type="text" name="description" id="description">
-        </div>
+  <form action="/lipsticks" method="POST">
+    <div>
+      <label for="lipstick-name">Name:</label>
+      <input type="text" id="lipstick-name" name="lipstickName" />
+    </div>
 
-        <div>
-          <label for="ingredients">Ingredients:</label>
-          <input type="text" name="ingredients" id="ingredients">
-        </div>
+    <div>
+      <label for="shades">Shade:</label>
+      <input type="text" id="shades" name="shades" />
+    </div>
 
-        <div>
-          <label for="applicationTechniques">Application Techniques:</label>
-          <input type="text" name="applicationTechniques" id="applicationTechniques">
-        </div>
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" name="description" id="description">
+    </div>
 
-        <div>
-          <label for="price">Price:</label>
-          <input type="text" name="price" id="price">
-        </div>
+    <div>
+      <label for="ingredients">Ingredients:</label>
+      <input type="text" name="ingredients" id="ingredients">
+    </div>
 
-        <button type="submit">Submit</button>
-    </form>
+    <div>
+      <label for="applicationTechniques">Application Techniques:</label>
+      <input type="text" name="applicationTechniques" id="applicationTechniques">
+    </div>
+
+    <div>
+      <label for="price">Price:</label>
+      <input type="text" name="price" id="price">
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
 </body>
 
 </html>
