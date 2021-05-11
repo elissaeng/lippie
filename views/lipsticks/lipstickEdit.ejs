@@ -7,6 +7,67 @@
   <title>Edit Lipstick</title>
 </head>
 <body>
-  <h1>Edit Lipstick</h1>
+  <h1>Edit <%= lipstick.lipstickName %></h1>
+  
+  <form action="/lipsticks/<%= lipstick._id %>?_method=PUT" method="POST">
+    <div>
+        <label for="lipstick-name">Name: </label>
+       <input 
+        type="text" 
+        id="lipstick-name" 
+        name="lipstickName"
+        value="<%= lipstick.lipstickName %>"
+        />
+    </div>
+
+    <div>
+        <label for="shades">Shades: </label>
+        <input type="text"
+        id="shades"
+        name="shades"
+        value="<%= lipstick.shades %>"
+        />
+    </div>
+
+    <div>
+        <label for="description">Description: </label>
+        <input type="text"
+        id="description"
+        name="description"
+        value="<%= lipstick.description %>"
+        />
+    </div>
+
+    <div>
+        <label for="ingredients">Ingredients:</label>
+        <input type="text"
+        id="ingredients"
+        name="ingredients"
+        value="<%= lipstick.ingredients %>"
+        />
+    </div>
+
+    <div>
+        <label for="applicationTechniques">Application Techniques:</label>
+        <input type="text"
+        id="applicationTechniques"
+        name="applicationTechniques"
+        value="<%= lipstick.applicationTechniques %>"
+        />
+    </div>
+
+    <div>
+        <label for="price">Price</label>
+        <input type="text"
+        id="price"
+        name="price"
+        value="<%= lipstick.price %>"
+        />
+    </div>
+
+
+  </form>
+
+
 </body>
 </html>
