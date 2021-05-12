@@ -1,10 +1,26 @@
 header  {
-  background-color: rgb(185, 180, 180);
+  /* background-color: rgb(185, 180, 180); */
+  background-color: plum;
+  padding: 10px;
+  font-family: 'Gothic A1', sans-serif;
 }
 
 body {
-  background-color: pink;
+  background-color: palevioletred;
   text-align: center;
+  font-family: 'Gothic A1', sans-serif;
+}
+
+.main {
+  /* background-image: url("https://i2.wp.com/i.pinimg.com/originals/2f/9b/57/2f9b5739833df118a4fe09e782a96e32.jpg"); */
+  background-image: url("https://im.vsco.co/aws-us-west-2/6f3a3b/115865135/5eee104af69a6f5f2d687c2e/vsco5eee104c85a98.jpg?w=412&dpr=2.625");
+  background-repeat: no-repeat;
+  border: solid white 5px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 120vh;
+    height: 60vh;
+    margin: 160px;
 }
 
 .info {
@@ -15,10 +31,15 @@ body {
 
 .products {
   text-align: left;
+  font-family: 'Gothic A1', sans-serif;
 }
 
 .shopping-bag {
   text-align: right;
+  position: relative;
+  bottom: 40px;
+  font-family: 'Gothic A1', sans-serif;
+
 }
 
 .product-page {
@@ -29,4 +50,17 @@ body {
 
 ul {
   list-style: none;
+  font-family: 'Gothic A1', sans-serif;
 }
+
+.followus {
+  top: 450px;
+  position: relative;
+  text-align: center;
+  font-family: 'Gothic A1', sans-serif;
+}
+
+/* .aboutus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
