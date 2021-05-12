@@ -65,3 +65,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; */
+
+.new {
+  background-color: #f2d9e4;
+}

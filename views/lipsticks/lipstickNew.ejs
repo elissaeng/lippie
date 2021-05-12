@@ -11,48 +11,50 @@
 <body>
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/lipsticks">Lipsticks</a></li>
+      <li class="lip-home"><a href="/">Home</a></li>
+      <li class="lip-list"><a href="/lipsticks">Lipsticks</a></li>
     </ul>
   </nav>
+
 
   <h4 class="products"><a href="/lipsticks">PRODUCTS</a></h4>
   <h4 class="shopping-bag">SHOPPING BAG</h4>
   <h1>Create New Lipstick</h1>
 
   <form action="/lipsticks" method="POST">
-    <div>
+    <div class="lip-name">
       <label for="lipstick-name">Name:</label>
       <input type="text" id="lipstick-name" name="lipstickName" />
     </div>
 
-    <div>
+    <div class="lip-shade">
       <label for="shades">Shade:</label>
       <input type="text" id="shades" name="shades" />
     </div>
 
-    <div>
+    <div class="lip-description">
       <label for="description">Description:</label>
       <input type="text" name="description" id="description">
     </div>
 
-    <div>
+    <div class="lip-ingridients">
       <label for="ingredients">Ingredients:</label>
       <input type="text" name="ingredients" id="ingredients">
     </div>
 
-    <div>
+    <div class="lip-technique">
       <label for="applicationTechniques">Application Techniques:</label>
       <input type="text" name="applicationTechniques" id="applicationTechniques">
     </div>
 
-    <div>
+    <div class="lip-price">
       <label for="price">Price:</label>
       <input type="text" name="price" id="price">
     </div>
 
     <button type="submit">Submit</button>
   </form>
+
 </body>
 
 </html>
