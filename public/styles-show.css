@@ -1,0 +1,53 @@
+header  {
+    background-color: #DEA0A0;
+    /* background-color: #A0A0DE; */
+    text-align: center;
+    padding: 10px;
+    font-family: 'Gothic A1', sans-serif;
+  }
+
+
+body {
+    /* background-color: rgb(219,154,178); */
+    background-color: #f2d9e4;
+    /* text-align: center; */
+    font-family: 'Gothic A1', sans-serif;
+  }
+  
+.info {
+    text-align: left;
+    position: relative;
+    bottom: -300px;
+  }
+
+.products {
+    text-align: left;
+    font-family: 'Gothic A1', sans-serif;
+  }
+
+
+.lip-show {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.lipstick-info {
+    margin-top: 100px;
+}
+
+
+.followus {
+    top: 450px;
+    position: relative;
+    text-align: center;
+    font-family: 'Gothic A1', sans-serif;
+  }
+
+#social {
+    width: 100px;
+    height: 50px;
+}
+
+.info {
+    background-color: #DEA0A0;
+  }

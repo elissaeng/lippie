@@ -5,29 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles-show.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gorditas&display=swap" rel="stylesheet">
     <title>Show Lipstick</title>
 </head>
 
 <body>
+    <header class="header">Get free US standard shipping w/ $25+! Use Code: SHIP25</header>
+    <h4 class="products"><a href="/lipsticks">PRODUCTS</a></h4>
 
     <main>
-        <h1>
-            <%= lipstick.lipstickName %>
-        </h1>
+        <div class="lip-show">
+            <h1>
+                <%= lipstick.lipstickName %>
+            </h1>
 
-        <p>Shade: <%= lipstick.shades %>
-        </p>
-        <p>Description: <%= lipstick.description %>
-        </p>
-        <p>Ingredients: <%= lipstick.ingredients %>
-        </p>
-        <p>Application Techniques: <%= lipstick.applicationTechniques %>
-        </p>
-        <p>Price: $<%= lipstick.price %>
-        </p>
+            <p>Shade: <%= lipstick.shades %>
+            </p>
+            <p>Description: <%= lipstick.description %>
+            </p>
+            <p>Ingredients: <%= lipstick.ingredients %>
+            </p>
+            <p>Application Techniques: <%= lipstick.applicationTechniques %>
+            </p>
+            <p>Price: $<%= lipstick.price %>
+            </p>
+        </div>
 
+        <div class="lipstick-info">
+            <h3>About The Product</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sequi dolor harum cumque ipsam vitae,
+                quidem
+                expedita, hic odit atque, aliquam provident laboriosam eaque nesciunt quasi nostrum mollitia animi
+                officia?</p>
+            <h3>Ingredients</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis natus fugiat tempore libero quisquam
+                minima optio laborum, alias facilis commodi suscipit dolore architecto, ullam aut quis saepe!
+                Quaerat,
+                quam magnam!</p>
+            <h3>Application Technique</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptatibus a aperiam tempore?
+                Tempore velit totam harum itaque libero voluptatem, vero sunt sequi voluptate, enim, eius fugiat
+                debitis
+                eaque placeat.</p>
+        </div>
     </main>
+
+
+    <div class="info">
+        <h4><a href="#">Contact</a></h4>
+        <h4>Shipping</a></h4>
+        <h4>Connect</a></h4>
+        <h5>Sign up for emails to get 10% off your first order!</h5>
+        <form action="#">
+            <input type="text" placeholder="Email">
+        </form>
+        <form action="#">
+            <input type="text" placeholder="Phone Number">
+        </form>
+        <button>Subscribe</button>
+    </div>
+
+    <footer class="followus">Follow Us
+        <img id="social" src="/socialMedia.png" alt="social media icons">
+    </footer>
+
 </body>
 
 </html>
