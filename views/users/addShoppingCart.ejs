@@ -28,7 +28,12 @@
                         <%= allLipsticks[i].lipstickName %>
                     </a>
 
-                    <form style="display: inline" action="/lipsticks/<%= allLipsticks[i]._id %>?_method=DELETE&name"
+                    <!-- <form style="display: inline" action="/users/<%= id %>/shoppingCart/delete/<%= allLipsticks[i]._id %>?_method=DELETE&name"
+                        method="POST">
+                        <button type="submit">Delete</button>
+                    </form> -->
+
+                    <form style="display: inline" action="/users/<%= id %>/shoppingCart/delete/<%= allLipsticks[i]._id %>?_method=DELETE"
                         method="POST">
                         <button type="submit">Delete</button>
                     </form>
