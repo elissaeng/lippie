@@ -105,6 +105,83 @@ app.delete('/lipsticks/:id', (req, res) => {
 })
 
 
+
+// Index Route
+app.get('/users', (req, res) => {
+    db.User.find({}, (err, users) => {
+        if (err) {
+            return console.log(err)
+        } console.log(users)
+        res.render('users/userIndex.ejs', {
+            allUsers: users,
+        });
+    });
+});
+
+//  User Route
+app.get('/users/new', (req, res) => {
+    res.render('users/userNew')
+})
+
+app.get('/users/:id/shoppingCart', (req, res) => {
+    db.Lipstick.find({}, (err, lipsticks) => {
+        if (err) {
+            return console.log(err)
+        } console.log(lipsticks)
+        res.render('users/addShoppingCart.ejs', {
+            allLipsticks: lipsticks, id:req.params.id
+        });
+    });
+    
+})
+
+app.get('/users/:id/shoppingCart/add/:lipstickId', (req, res) => {
+  db.User.findById(req.params.id, (err, foundUser) => {
+    db.Lipstick.findById(req.params.lipstickId, (err, foundLipstick) => {
+        foundUser.shoppingCart.push(foundLipstick);
+        foundUser.save().then(savedUser => {
+            res.redirect(`/users/${req.params.id}`)
+        })
+    })
+  })
+    
+})
+
+app.get('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
+    db.Lipstick.find({}, (err, lipsticks) => {
+        if (err) {
+            return console.log(err)
+        } console.log(lipsticks)
+        res.render('users/addShoppingCart.ejs', {
+            allLipsticks: lipsticks, id:req.params.id
+        });
+    });
+})
+
+app.get('/users/:id', (req, res) => {
+    db.User.findById(req.params.id).populate('shoppingCart').exec( (err, yayUser) => {
+        if (err) {
+            return console.log(err);
+        } console.log(yayUser);
+        res.render('users/userShow', { user: yayUser })
+    });
+});
+
+// Create Route
+app.post('/users', (req, res) => {
+    console.log(req.body)
+    db.User.create(req.body, (err, newUser) => {
+        if (err) {
+            return console.log(err);
+        }
+        console.log(newUser);
+
+        res.redirect('/user');
+    });
+});
+
+    
+
 app.listen(PORT, () => {
     console.log(`Our app listening at http://localhost:${PORT}`)
 });

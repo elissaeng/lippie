@@ -1,9 +1,3 @@
-// Lipstick Model
-// -Img Source: Photo URL -Name: String
-// -Description: String
-// -Shades: String
-// -Ingredients: String -Application Technique: String -Price: Number
-
 const mongoose = require("mongoose");
 
 

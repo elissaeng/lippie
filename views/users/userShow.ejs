@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles-show.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gorditas&display=swap" rel="stylesheet">
+    <title>Show User</title>
+</head>
+
+<body>
+    <header class="header">Get free US standard shipping w/ $25+ Use Code: SHIP25</header>
+    <h4 class="products"><a href="/lipsticks">PRODUCTS</a></h4>
+
+    <main>
+        <div class="lip-show">
+            <h1>
+                <%= user.name %>, Shopping Bag
+            </h1>
+            <a href="/users/<%=user.id%>/shoppingCart">Modify your shopping cart</a>
+           
+        </div>
+        
+        <% for (let i = 0; i < user.shoppingCart.length; i++) { %>
+          <li>
+            <a href="/lipsticks/<%= user.shoppingCart[i]._id %>">
+              <%= user.shoppingCart[i].lipstickName %>
+            </a>
+          </li>
+        <% } %>
+
+    </main>
+
+
+    <div class="info">
+        <h4><a href="#">Contact</a></h4>
+        <h4>Shipping</a></h4>
+        <h4>Connect</a></h4>
+        <h5>Sign up for emails to get 10% off your first order!</h5>
+        <form action="#">
+            <input type="text" placeholder="Email">
+        </form>
+        <form action="#">
+            <input type="text" placeholder="Phone Number">
+        </form>
+        <button>Subscribe</button>
+    </div>
+
+    <footer class="followus">Follow Us
+        <img id="social" src="/socialMedia.png" alt="social media icons">
+    </footer>
+
+</body>
+
+</html>

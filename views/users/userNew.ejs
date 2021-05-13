@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles-new.css">
+  <title>New Lipstick</title>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li class="lip-home"><a href="/">Home</a></li>
+      <li class="lip-list"><a href="/lipsticks">Lipsticks</a></li>
+    </ul>
+  </nav>
+
+
+  <h4 class="products"><a href="/lipsticks">PRODUCTS</a></h4>
+  <h4 class="shopping-bag">SHOPPING BAG</h4>
+  <h1>Create New Lipstick</h1>
+
+  <form action="/users" method="POST">
+    <div class="lip-name">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+    </div>
+
+    <div class="lip-shade">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+
+</html>

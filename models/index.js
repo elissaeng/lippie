@@ -23,4 +23,5 @@ mongoose.connection.on('error', (err) => {
 
 module.exports = {
   Lipstick: require('./Lipstick'),
+  User: require('./User'),
 };

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Lipstick Project-One</title>
+</head>
+
+<body>
+    <main class="product-page">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/lipstick/new">Create New Lipstick</a></li>
+            </ul>
+        </nav>
+        <h1>Users</h1>
+
+
+        <ul>
+            <% for (let i=0; i < allUsers.length; i++) { %>
+                <li>
+                    <a href="/users/<%= allUsers[i]._id %>">
+                        <%= allUsers[i].name %>
+                    </a>
+
+                    
+        
+                </li>
+                <% } %>
+        </ul>
+
+
+    </main>
+</body>
+
+</html>

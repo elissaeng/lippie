@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+
+    <title>Lipstick Project-One</title>
+</head>
+
+<body>
+    <main class="product-page">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/lipsticks/new">Create New Lipstick</a></li>
+            </ul>
+        </nav>
+        <h1>Lipsticks</h1>
+
+
+        <ul>
+            <% for (let i=0; i < allLipsticks.length; i++) { %>
+                <li>
+                    <a href="/lipsticks/<%= allLipsticks[i]._id %>">
+                        <%= allLipsticks[i].lipstickName %>
+                    </a>
+
+                    <form style="display: inline" action="/lipsticks/<%= allLipsticks[i]._id %>?_method=DELETE&name"
+                        method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+
+                    <a href="/users/<%= id %>/shoppingCart/add/<%= allLipsticks[i]._id %>">
+                        <button type="edit">Add to Shopping Cart</button>
+                    </a>
+                </li>
+                <% } %>
+        </ul>
+
+
+    </main>
+</body>
+
+</html>
