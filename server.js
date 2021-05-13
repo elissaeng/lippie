@@ -176,7 +176,7 @@ app.post('/users', (req, res) => {
         }
         console.log(newUser);
 
-        res.redirect('/user');
+        res.redirect('/users');
     });
 });
 
