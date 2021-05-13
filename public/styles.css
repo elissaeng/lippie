@@ -17,6 +17,10 @@ body {
   background-color: #f2d9e4;
   text-align: center;
   font-family: 'Gothic A1', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 20px;
   /* background-image: url('cloud.png'); */
 }
 
@@ -27,11 +31,9 @@ h1 {
 }
 
 p {
-  margin: 50px;
+  margin: 50px 50px 0;
   padding: 20px;
 }
-
-
 
 .main {
   /* background-image: url("https://i2.wp.com/i.pinimg.com/originals/2f/9b/57/2f9b5739833df118a4fe09e782a96e32.jpg"); */
@@ -40,16 +42,16 @@ p {
   background-size: auto;
   border: solid white 5px;
     border-radius: 5px;
-    padding: 5px;
+    padding: 30px;
     width: 110vh;
     height: 60vh;
-    margin: 160px;
+    margin: 80px auto 20px;
 }
 
 .collage {
   border: solid white 5px;
   border-radius: 5px;
-  margin: 20px;
+  margin: 130px;
 }
 
 .seen {
@@ -70,6 +72,11 @@ p {
 
 .products {
   text-align: left;
+  font-family: 'Gothic A1', sans-serif;
+}
+
+.shopping {
+  text-align: right;
   font-family: 'Gothic A1', sans-serif;
 }
 
