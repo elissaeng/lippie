@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <!-- <link rel="stylesheet" href="/styles.css"> -->
     <link rel="stylesheet" href="/styles-index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
@@ -20,14 +20,15 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/lipsticks/new">Create New Lipstick</a></li>
                 <li><a href="/users/new">Create New User</a></li>
+                <li><a href="/users">Users</a></li>
             </ul>
         </nav>
-        <h1>Lipsticks</h1>
+        <h1>Lipstick Names</h1>
 
 
         <ul>
             <% for (let i=0; i < allLipsticks.length; i++) { %>
-                <li>
+                <li class="lippy-name">
                     <a href="/lipsticks/<%= allLipsticks[i]._id %>">
                         <%= allLipsticks[i].lipstickName %>
                     </a>
@@ -45,18 +46,18 @@
         </ul>
 
         <div class="info">
-            <h4><a href="#">Contact</a></h4>
-            <h4>Shipping</a></h4>
-            <h4>Connect</a></h4>
+            <h4>Contact</h4>
+            <h4>Shipping</h4>
+            <h4>Connect</h4>
             <h5>Sign up for emails to get 10% off your first order!</h5>
             <form action="#">
-              <input type="text" placeholder="Email">
+                <input type="text" placeholder="Email">
             </form>
             <form action="#">
-              <input type="text" placeholder="Phone Number">
+                <input type="text" placeholder="Phone Number">
             </form>
             <button>Subscribe</button>
-        </div>    
+        </div>
 
 
         <footer class="followus">

@@ -1,17 +1,19 @@
 header  {
   background-color: #DEA0A0;
-  /* background-color: #A0A0DE; */
   text-align: center;
   padding: 10px;
   font-family: 'Gothic A1', sans-serif;
 }
 
 body {
-  /* background-color: rgb(219,154,178); */
   background-color: #f2d9e4;
-  /* text-align: center; */
   font-family: 'Gothic A1', sans-serif;
 }
+
+li {
+  list-style-type: none;
+}
+
 
 .info {
   text-align: left;
@@ -19,6 +21,8 @@ body {
   bottom: -423px;
   background-color: #DEA0A0;
   padding: 29px;
+  border: solid white 5px;
+  border-radius: 5px;
 }
 
 .followus {
@@ -27,20 +31,16 @@ body {
   text-align: center;
   font-family: 'Gothic A1', sans-serif;
   background-color: #DEBFA0;
-  padding: 6px;
+  padding: 2px;
+  border: solid white 5px;
+  border-radius: 5px;
 }
 
 #follow-text {
-  /* display: inline-block; */
-  /* display: block; */
-  /* bottom: 200px; */
-  
-  font-size: 26px;
-  
+ font-size: 26px;
 }
 
 #social {
   width: 136px;
   height: 58px;
-  /* display: inline; */
 }

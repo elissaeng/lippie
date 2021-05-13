@@ -1,15 +1,12 @@
 header  {
     background-color: #DEA0A0;
-    /* background-color: #A0A0DE; */
     text-align: center;
     padding: 10px;
     font-family: 'Gothic A1', sans-serif;
   }
 
 body {
-    /* background-color: rgb(219,154,178); */
     background-color: #f2d9e4;
-    /* text-align: center; */
     font-family: 'Gothic A1', sans-serif;
   }
   
@@ -52,7 +49,6 @@ body {
 }
 
   #followtext {
-    /* display: inline-block; */
     display: block;
     bottom: 20px;
     font-size: 26px;
@@ -62,5 +58,4 @@ body {
   #social {
     width: 136px;
     height: 58px;
-    /* display: inline; */
   }

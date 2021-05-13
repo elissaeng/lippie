@@ -80,13 +80,14 @@ app.get('/lipsticks/:id/edit', (req, res) => {
 
 // Update lipstick list to the product page
 app.put('/lipsticks/:id', (req, res) => {
+    console.log('stressed and dying')
     db.Lipstick.findByIdAndUpdate(
         req.params.id,
         req.body,
         { new: true },
         (err, updatedLipstick) => {
             if (err) {
-                return console.log();
+                return console.log(err);
             }
             res.redirect('/lipsticks');
         }
@@ -94,7 +95,7 @@ app.put('/lipsticks/:id', (req, res) => {
 });
 
 
-// Delete Fruit
+// Delete
 app.delete('/lipsticks/:id', (req, res) => {
     db.Lipstick.findByIdAndDelete(req.params.id, (err, deletedLipstick) => {
         if (err) {
@@ -129,44 +130,47 @@ app.get('/users/:id/shoppingCart', (req, res) => {
             return console.log(err)
         } console.log(lipsticks)
         res.render('users/addShoppingCart.ejs', {
-            allLipsticks: lipsticks, id:req.params.id
+            allLipsticks: lipsticks, id: req.params.id
         });
     });
-    
+
 })
 
 app.get('/users/:id/shoppingCart/add/:lipstickId', (req, res) => {
-  db.User.findById(req.params.id, (err, foundUser) => {
-    db.Lipstick.findById(req.params.lipstickId, (err, foundLipstick) => {
-        foundUser.shoppingCart.push(foundLipstick);
-        foundUser.save().then(savedUser => {
-            res.redirect(`/users/${req.params.id}`)
+    db.User.findById(req.params.id, (err, foundUser) => {
+        db.Lipstick.findById(req.params.lipstickId, (err, foundLipstick) => {
+            foundUser.shoppingCart.push(foundLipstick);
+            foundUser.save().then(savedUser => {
+                res.redirect(`/users/${req.params.id}`)
+            })
         })
     })
-  })
-    
+
 })
 
 // app.delete('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
-// db.User.findByIdAndUpdate(req.params.id, (err, foundUser) => {
-//     foundUser.shoppingCart.pop(foundLipstick);
-//     foundUser.save().then(savedUser => {
-//         res.redirect(`/users/${req.params.id}`)
+//     db.User.findByIdAndUpdate(req.params.id, (err, foundUser) => {
+//         db.Lipstick.findById(req.params.lipstickId, (err, foundLipstick) => {
+//             foundUser.shoppingCart.pop(foundLipstick);
+//             foundUser.save().then(savedUser => {
+//                 res.redirect(`/users/${req.params.id}`)
+//             });
+//         });
 //     });
 // });
 
-app.delete('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
-    console.log('is this working')
-    db.User.findByIdAndUpdate (
-    req.params.id,
-    { $pull: {lipsticks: req.params.lipstickId} },
-    (err) => {
-        if (err) return console.log(err);
-  
-        res.redirect('/users'); 
-    
-    });
-});
+// app.delete('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
+//     console.log('is this working')
+//     db.User.findByIdAndUpdate(
+//         req.params.id,
+//         { $pull: { lipsticks: req.params.lipstickId } },
+//         (err) => {
+//             if (err) return console.log(err);
+
+//             res.redirect('/users');
+
+//         });
+// });
 
 app.get('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
     db.Lipstick.find({}, (err, lipsticks) => {
@@ -174,13 +178,13 @@ app.get('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
             return console.log(err)
         } console.log(lipsticks)
         res.render('users/addShoppingCart.ejs', {
-            allLipsticks: lipsticks, id:req.params.id
+            allLipsticks: lipsticks, id: req.params.id
         });
     });
 })
 
 app.get('/users/:id', (req, res) => {
-    db.User.findById(req.params.id).populate('shoppingCart').exec( (err, yayUser) => {
+    db.User.findById(req.params.id).populate('shoppingCart').exec((err, yayUser) => {
         if (err) {
             return console.log(err);
         } console.log(yayUser);
@@ -201,7 +205,7 @@ app.post('/users', (req, res) => {
     });
 });
 
-    
+
 
 app.listen(PORT, () => {
     console.log(`Our app listening at http://localhost:${PORT}`)

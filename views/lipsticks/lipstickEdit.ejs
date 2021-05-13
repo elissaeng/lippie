@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styles-edit.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
-  <title>Edit Lipstick</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles-edit.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
+    <title>Edit Lipstick</title>
 </head>
+
 <body>
     <header class="header">Get free US standard shipping w/ $25+ Use Code: SHIP25</header>
     <ul>
-    <li><a href="/">Home</a></li>
-    <li class="lip-list"><a href="/lipsticks">Products</a></li>
-    <li><a href="/users/new">Create New User</a></li>
-    </ul>   
-  <h4 class="shopping-bag">SHOPPING BAG</h4>
-  
-  <h1>Edit <%= lipstick.lipstickName %></h1>
-  
-  <form action="/lipsticks/<%= lipstick._id %>?_method=PUT" method="POST">
-    <div>
-        <label for="lipstick-name">Name: </label>
-       <input 
-        type="text" 
-        id="lipstick-name" 
-        name="lipstickName"
-        value="<%= lipstick.lipstickName %>"
-        />
-    </div>
+        <li><a href="/">Home</a></li>
+        <li class="lip-list"><a href="/lipsticks">Products</a></li>
+        <li><a href="/users/new">Create New User</a></li>
+        <li><a href="/users">Users</a></li>
+    </ul>
+    <h4 class="shopping-bag">SHOPPING BAG</h4>
 
-    <div>
-        <label for="shades">Shade: </label>
-        <input type="text"
-        id="shades"
-        name="shades"
-        value="<%= lipstick.shades %>"
-        />
-    </div>
-    
-    <!-- <div>
+    <h1>Edit <%= lipstick.lipstickName %>
+    </h1>
+
+    <form action="/lipsticks/<%= lipstick._id %>?_method=PUT" method="POST">
+        <div>
+            <label for="lipstick-name">Name: </label>
+            <input type="text" id="lipstick-name" name="lipstickName" value="<%= lipstick.lipstickName %>" />
+        </div>
+
+        <div>
+            <label for="shades">Shade: </label>
+            <input type="text" id="shades" name="shades" value="<%= lipstick.shades %>" />
+        </div>
+
+        <!-- <div>
         <label for="image">Image: </label>
         <input type="text"
         id="image"
@@ -49,64 +44,50 @@
         />
     </div> -->
 
-    <div>
-        <label for="description">Description: </label>
-        <input type="text"
-        id="description"
-        name="description"
-        value="<%= lipstick.description %>"
-        />
-    </div>
+        <div>
+            <label for="description">Description: </label>
+            <input type="text" id="description" name="description" value="<%= lipstick.description %>" />
+        </div>
 
-    <div>
-        <label for="ingredients">Ingredients:</label>
-        <input type="text"
-        id="ingredients"
-        name="ingredients"
-        value="<%= lipstick.ingredients %>"
-        />
-    </div>
+        <div>
+            <label for="ingredients">Ingredients:</label>
+            <input type="text" id="ingredients" name="ingredients" value="<%= lipstick.ingredients %>" />
+        </div>
 
-    <div>
-        <label for="applicationTechniques">Application Techniques:</label>
-        <input type="text"
-        id="applicationTechniques"
-        name="applicationTechniques"
-        value="<%= lipstick.applicationTechniques %>"
-        />
-    </div>
+        <div>
+            <label for="applicationTechniques">Application Techniques:</label>
+            <input type="text" id="applicationTechniques" name="applicationTechniques"
+                value="<%= lipstick.applicationTechniques %>" />
+        </div>
 
-    <div>
-        <label for="price">Price: </label>
-        <input type="text"
-        id="price"
-        name="price"
-        value="<%= lipstick.price %>"
-        />
-    </div>
+        <div>
+            <label for="price">Price: </label>
+            <input type="text" id="price" name="price" value="<%= lipstick.price %>" />
+        </div>
 
-    <button type="submit">Update</button>
-  </form>
-
-  <div class="info">
-    <h4><a href="#">Contact</a></h4>
-    <h4>Shipping</a></h4>
-    <h4>Connect</a></h4>
-    <h5>Sign up for emails to get 10% off your first order!</h5>
-    <form action="#">
-        <input type="text" placeholder="Email">
+        <button type="submit">Update</button>
     </form>
-    <form action="#">
-        <input type="text" placeholder="Phone Number">
-    </form>
-    <button>Subscribe</button>
-</div>
 
-<footer class="followus"> 
-    <h4 id="follow-text">Follow Us</h4>
-    <img id="social" src="/socialMedia.png" alt="social media icons">
-</footer>
+    <div class="info">
+        <h4><a href="#">Contact</a></h4>
+        <h4>Shipping</a></h4>
+        <h4>Connect</a></h4>
+        <h5>Sign up for emails to get 10% off your first order!</h5>
+        <form action="#">
+            <input type="text" placeholder="Email">
+        </form>
+        <form action="#">
+            <input type="text" placeholder="Phone Number">
+        </form>
+        <button>Subscribe</button>
+    </div>
+
+    <footer class="followus">
+        <h4 id="follow-text">Follow Us</h4>
+        <img id="social" src="/socialMedia.png" alt="social media icons">
+    </footer>
 
 
 </body>
+
 </html>

@@ -1,6 +1,5 @@
 header  {
   background-color: #DEA0A0;
-  /* background-color: #A0A0DE; */
   padding: 10px;
   font-family: 'Gothic A1', sans-serif;
   text-align: center;
@@ -8,10 +7,10 @@ header  {
 
 li {
   list-style-type: none;
+  text-align: left;
 }
 
 body {
-  /* background-color: rgb(219,154,178); */
   background-color: #f2d9e4;
   font-family: 'Gothic A1', sans-serif;
   
@@ -23,6 +22,8 @@ body {
   bottom: -423px;
   background-color: #DEA0A0;
   padding: 29px;
+  border: solid white 5px;
+  border-radius: 5px;
 }
 
 .followus {
@@ -32,10 +33,11 @@ body {
   font-family: 'Gothic A1', sans-serif;
   background-color: #DEBFA0;
   padding: 2px;
+  border: solid white 5px;
+  border-radius: 5px;
 }
 
 #followtext {
-  /* display: inline-block; */
   display: block;
   bottom: 20px;
   font-size: 26px;
@@ -45,11 +47,9 @@ body {
 #social {
   width: 136px;
   height: 58px;
-  /* display: inline; */
 }
 
 .lip-home {
-  /* text-align: left; */
   margin-left: -35px;
 }
 
@@ -59,14 +59,10 @@ body {
 
 .products {
   font-size: 13px;
-  /* display: flex;
-  display: column */
-  
   margin-left: 5px;
   margin: 20px
 }
 
 .shopping-bag {
   margin-right: -30px;
-  
 }
