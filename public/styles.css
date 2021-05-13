@@ -1,8 +1,8 @@
 header  {
   background-color: #DEA0A0;
-  /* background-color: #A0A0DE; */
   padding: 10px;
   font-family: 'Gothic A1', sans-serif;
+  font-weight: bolder;
   /* background-image: url('cloud.png'); */
 }
 
@@ -23,18 +23,39 @@ body {
 h1 {
   font-family: 'Gorditas', cursive;
   color: #29194d;
+  font-size: 50px;
 }
+
+p {
+  margin: 50px;
+  padding: 20px;
+}
+
+
 
 .main {
   /* background-image: url("https://i2.wp.com/i.pinimg.com/originals/2f/9b/57/2f9b5739833df118a4fe09e782a96e32.jpg"); */
   background-image: url("https://im.vsco.co/aws-us-west-2/6f3a3b/115865135/5eee104af69a6f5f2d687c2e/vsco5eee104c85a98.jpg?w=412&dpr=2.625");
   background-repeat: no-repeat;
+  background-size: auto;
   border: solid white 5px;
     border-radius: 5px;
     padding: 5px;
-    width: 120vh;
+    width: 110vh;
     height: 60vh;
     margin: 160px;
+}
+
+.collage {
+  border: solid white 5px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.seen {
+  border: solid white 5px;
+  border-radius: 5px;
+  margin: 20px;
 }
 
 .info {
@@ -43,6 +64,8 @@ h1 {
   bottom: -423px;
   background-color: #DEA0A0;
   padding: 29px;
+  border: solid white 5px;
+  border-radius: 5px;
 }
 
 .products {
@@ -69,6 +92,14 @@ ul {
   font-family: 'Gothic A1', sans-serif;
 }
 
+h5 {
+margin-bottom: 10px;
+}
+
+.subscribe {
+  margin: 10px;
+}
+
 .followus {
   top: 450px;
   position: relative;
@@ -76,6 +107,8 @@ ul {
   font-family: 'Gothic A1', sans-serif;
   background-color: #DEBFA0;
   padding: 2px;
+  border: solid white 5px;
+  border-radius: 5px;
 }
 
 #followtext {
