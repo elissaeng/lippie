@@ -1,0 +1,34 @@
+header  {
+  background-color: #DEA0A0;
+  /* background-color: #A0A0DE; */
+  text-align: center;
+  padding: 10px;
+  font-family: 'Gothic A1', sans-serif;
+}
+
+body {
+  /* background-color: rgb(219,154,178); */
+  /* background-color: #f2d9e4; */
+  background-color: rgb(43, 22, 43);
+  font-family: 'Gothic A1', sans-serif;
+}
+
+.followus {
+  top: 450px;
+  position: relative;
+  text-align: center;
+  font-family: 'Gothic A1', sans-serif;
+  background-color: #DEBFA0;
+  padding: 2px;
+}
+
+
+
+#social {
+    width: 100px;
+    height: 50px;
+}
+
+.info {
+    background-color: #DEA0A0;
+  }
