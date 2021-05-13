@@ -27,15 +27,16 @@ body {
   text-align: center;
   font-family: 'Gothic A1', sans-serif;
   background-color: #DEBFA0;
-  padding: 2px;
+  padding: 6px;
 }
 
-#followtext {
+#follow-text {
   /* display: inline-block; */
-  display: block;
-  bottom: 20px;
+  /* display: block; */
+  /* bottom: 200px; */
+  
   font-size: 26px;
-  margin-bottom: 2px;
+  
 }
 
 #social {
