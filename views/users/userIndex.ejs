@@ -18,7 +18,7 @@
     <header class="header">Get free US standard shipping w/ $25+ Use Code: SHIP25</header>
 
     <main class="product-page">
-        
+
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
@@ -28,22 +28,21 @@
             </ul>
         </nav>
         <h1>Users</h1>
-                <% for (let i=0; i < allUsers.length; i++) { %>
-                    <li>
-                        <a href="/users/<%= allUsers[i]._id %>">
-                            <%= allUsers[i].name %>
-                        </a>
-                    </li>
-                    <form style="display: inline" action="/users/<%= allUsers[i]._id %>?_method=DELETE&name"
-                        method="POST">
-                        <button type="submit">Delete</button>
-                    </form>
-                </li>
-                <% } %>
-        </main>
+        <% for (let i=0; i < allUsers.length; i++) { %>
+            <li>
+                <a href="/users/<%= allUsers[i]._id %>">
+                    <%= allUsers[i].name %>
+                </a>
+            </li>
+            <form style="display: inline" action="/users/<%= allUsers[i]._id %>?_method=DELETE&name" method="POST">
+                <button class="delete" type="submit">Delete</button>
+            </form>
+            </li>
+            <% } %>
+    </main>
 
 
-    
+
 
     <div class="info">
         <h4>Careers</h4>

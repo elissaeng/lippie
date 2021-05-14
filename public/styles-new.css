@@ -11,6 +11,31 @@ nav {
   margin: 0;
 }
 
+.lip-name {
+  margin: 0 auto 12px;
+}
+
+.lip-shade {
+  margin: 0 auto 12px;
+}
+
+.lip-description {
+  margin: 0 auto 12px;
+}
+
+.lip-ingridients {
+  margin: 0 auto 12px;
+}
+
+.lip-technique {
+  margin: 0 auto 12px;
+}
+
+.lip-price {
+  margin: 0 auto 12px;
+}
+
+
 nav ul {
   display: flex;
   width: 100%;

@@ -76,3 +76,11 @@ h1 {
   width: 136px;
   height: 58px;
 }
+
+.lippy-name {
+  margin: 0 auto;
+}
+
+.delete {
+  margin: 0 5px;
+}

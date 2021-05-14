@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/styles-index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
-    <title>Lipstick Project-One</title>
+    <title>Lipstick Names</title>
 </head>
 
 <body>
@@ -24,7 +24,8 @@
             </ul>
         </nav>
         <h1>Lipstick Names</h1>
-        <img id="pastel-lipsticks"src="https://i.pinimg.com/originals/fc/ca/3c/fcca3c31cd5426d1d8769b02572330ff.gif" alt="dancing lipsticks">
+        <img id="pastel-lipsticks" src="https://i.pinimg.com/originals/fc/ca/3c/fcca3c31cd5426d1d8769b02572330ff.gif"
+            alt="dancing lipsticks">
 
         <ul>
             <% for (let i=0; i < allLipsticks.length; i++) { %>
@@ -35,11 +36,11 @@
 
                     <form style="display: inline" action="/lipsticks/<%= allLipsticks[i]._id %>?_method=DELETE&name"
                         method="POST">
-                        <button type="submit">Delete</button>
+                        <button class="delete" type="submit">Delete</button>
                     </form>
 
                     <a href="/lipsticks/<%= allLipsticks[i]._id %>/edit">
-                        <button type="edit">Edit</button>
+                        <button class="edit" type="edit">Edit</button>
                     </a>
                 </li>
                 <% } %>

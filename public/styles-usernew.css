@@ -34,9 +34,14 @@ h1 {
     
   }
   
-.lippy-name {
-    padding: 20px;
+.lip-name {
+    margin: 0 auto 12px;
   }
+
+
+.submit {
+  margin: 12px;
+}
   
 
 .info {

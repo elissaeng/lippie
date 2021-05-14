@@ -22,7 +22,13 @@ header  {
   li {
     list-style-type: none;
     padding: 5px;
+    margin: 0 auto 10px;
   }
+
+
+.delete {
+  margin: 0 auto 10px;
+}
   
 body {
     background-color: #f2d9e4;
@@ -72,3 +78,5 @@ h1 {
     width: 136px;
     height: 58px;
   }
+
+  
