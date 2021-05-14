@@ -15,12 +15,19 @@
 
 <body>
     <header class="header">Get free US standard shipping w/ $25+ Use Code: SHIP25</header>
-    <h4 class="products"><a href="/lipsticks">PRODUCTS</a></h4>
+    <nav>
+        <ul>
+          <li class="lip-home"><a href="/">Home</a></li>
+          <li class="lip-list"><a href="/lipsticks">Products</a></li>
+          <li><a href="/lipsticks/new">Create New Lipstick</a></li>
+          <li><a href="/users">Users</a></li>
+        </ul>
+      </nav>
 
     <main>
         <div class="lip-show">
             <h1>
-                <%= user.name %>, Shopping Bag
+                <%= user.name %>'s Shopping Bag
             </h1>
             <a href="/users/<%=user.id%>/shoppingCart">Modify your shopping cart</a>
            
