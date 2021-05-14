@@ -163,16 +163,6 @@ app.delete('/users/:id', (req, res) => {
         });
     });
 
-// Delete Lipstick
-// app.delete('/lipsticks/:id', (req, res) => {
-//     db.Lipstick.findByIdAndDelete(req.params.id, (err, deletedLipstick) => {
-//         if (err) {
-//             return console.log(err);
-//         }
-//         res.redirect('/lipsticks');
-//     })
-// })
-
 // app.delete('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
 //     db.User.findByIdAndUpdate(req.params.id, (err, foundUser) => {
 //         db.Lipstick.findById(req.params.lipstickId, (err, foundLipstick) => {

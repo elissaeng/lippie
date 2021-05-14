@@ -30,23 +30,15 @@ body {
   
 }
 
-/* #purple-cloud {
+.info {
+  text-align: left;
   position: relative;
-  left: 631px;
-  bottom: 698px;
-  z-index: -1;
+  bottom: -423px;
+  background-color: #DEA0A0;
+  padding: 29px;
+  border: solid white 5px;
+  border-radius: 5px;
 }
-
-#pink-cloud {
-  position: relative;
-  bottom: 785px;
-  left: 629px;
-}
-
-#white-cloud {
-  position: relative;
-  bottom: 428px;
-} */
 
 .info {
   text-align: left;
