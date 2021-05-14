@@ -29,8 +29,6 @@ nav {
   bottom: 398px;
 }
 
-
-
 .lip-name {
   margin: 0 auto 12px;
 }
@@ -54,7 +52,6 @@ nav {
 .lip-price {
   margin: 0 auto 12px;
 }
-
 
 nav ul {
   display: flex;
@@ -135,3 +132,4 @@ body {
 .shopping-bag {
   margin-right: -30px;
 }
+

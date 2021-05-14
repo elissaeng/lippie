@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet">
 
-
     <title>User Index</title>
 </head>
 
@@ -18,7 +17,6 @@
     <header class="header">Get free US standard shipping w/ $25+ Use Code: SHIP25</header>
 
     <main class="product-page">
-
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
@@ -27,6 +25,7 @@
                 <li><a href="/users/new">Create New User</a></li>
             </ul>
         </nav>
+        
         <h1>Users</h1>
         <% for (let i=0; i < allUsers.length; i++) { %>
             <li>
@@ -38,11 +37,8 @@
                 <button class="delete" type="submit">Delete</button>
             </form>
             </li>
-            <% } %>
+        <% } %>
     </main>
-
-
-
 
     <div class="info">
         <h4>Careers</h4>
@@ -58,14 +54,12 @@
             <input class="phone" type="text" placeholder="Phone Number">
         </form>
         <button class="subscribe">Subscribe</button>
-
-    </div>
+     </div>
 
     <footer class="followus">
         <h4 id="followtext">Follow Us</h4>
         <img id="social" src="/socialMedia.png" alt="social media icons">
     </footer>
-
 
 </body>
 

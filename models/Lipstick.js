@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-
 const lipstickSchema = new mongoose.Schema({
     lipstickName: String,
     image: String,

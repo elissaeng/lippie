@@ -15,7 +15,6 @@ app.use((req, res, next) => {
     next();
 });
 
-
 app.use(express.urlencoded({ extended: false }));
 
 app.use(methodOverride('_method'));
@@ -27,6 +26,8 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
     res.render('home.ejs');
 });
+
+
 
 // Index Route
 app.get('/lipsticks', (req, res) => {
@@ -59,6 +60,7 @@ app.get('/lipsticks/new', (req, res) => {
     res.render('lipsticks/lipstickNew.ejs');
 });
 
+
 // Show Route
 app.get('/lipsticks/:id', (req, res) => {
     db.Lipstick.findById(req.params.id, (err, yayLipstick) => {
@@ -68,6 +70,7 @@ app.get('/lipsticks/:id', (req, res) => {
         res.render('lipsticks/lipstickShow', { lipstick: yayLipstick })
     });
 });
+
 
 // Edit Lipstick
 app.get('/lipsticks/:id/edit', (req, res) => {
@@ -106,6 +109,7 @@ app.delete('/lipsticks/:id', (req, res) => {
     })
 })
 
+
 // Index Route
 app.get('/users', (req, res) => {
     db.User.find({}, (err, users) => {
@@ -118,10 +122,12 @@ app.get('/users', (req, res) => {
     });
 });
 
+
 //  User Route
 app.get('/users/new', (req, res) => {
     res.render('users/userNew')
 })
+
 
 app.get('/users/:id/shoppingCart', (req, res) => {
     db.Lipstick.find({}, (err, lipsticks) => {
@@ -146,15 +152,16 @@ app.get('/users/:id/shoppingCart/add/:lipstickId', (req, res) => {
     });
 });
 
+
 app.get('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
     db.User.findById(req.params.id, (err, foundUser) => {
         foundUser.shoppingCart.remove(req.params.lipstickId);
         foundUser.save().then(savedUser => {
             res.redirect(`/users/${req.params.id}`)
-           
         });
     });
 });
+
 
 // Delete User
 app.delete('/users/:id', (req, res) => {
@@ -187,6 +194,7 @@ app.delete('/users/:id', (req, res) => {
 //         });
 // });
 
+
 app.get('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
     db.Lipstick.find({}, (err, lipsticks) => {
         if (err) {
@@ -198,6 +206,7 @@ app.get('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
     });
 })
 
+
 app.get('/users/:id', (req, res) => {
     db.User.findById(req.params.id).populate('shoppingCart').exec((err, yayUser) => {
         if (err) {
@@ -206,6 +215,7 @@ app.get('/users/:id', (req, res) => {
         res.render('users/userShow', { user: yayUser })
     });
 });
+
 
 // Create Route
 app.post('/users', (req, res) => {
