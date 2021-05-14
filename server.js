@@ -148,6 +148,17 @@ app.get('/users/:id/shoppingCart/add/:lipstickId', (req, res) => {
 
 })
 
+app.get('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
+    db.User.findById(req.params.id, (err, foundUser) => {
+        foundUser.shoppingCart.remove(req.params.lipstickId);
+        foundUser.save().then(savedUser => {
+            res.redirect(`/users/${req.params.id}`)
+           
+        })
+    })
+
+})
+
 // app.delete('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
 //     db.User.findByIdAndUpdate(req.params.id, (err, foundUser) => {
 //         db.Lipstick.findById(req.params.lipstickId, (err, foundLipstick) => {

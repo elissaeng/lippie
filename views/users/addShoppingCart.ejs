@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles-userCart">
 
     <title>Lipstick Project-One</title>
 </head>
@@ -16,6 +16,9 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/lipsticks/new">Create New Lipstick</a></li>
+                <li><a href="/lipsticks">Products</a></li>
+                <li><a href="/users/new">Create New User</a></li>
+                <li><a href="/users">Users</a></li>
             </ul>
         </nav>
         <h1>Lipsticks</h1>
@@ -27,16 +30,6 @@
                     <a href="/lipsticks/<%= allLipsticks[i]._id %>">
                         <%= allLipsticks[i].lipstickName %>
                     </a>
-
-                    <!-- <form style="display: inline" action="/users/<%= id %>/shoppingCart/delete/<%= allLipsticks[i]._id %>?_method=DELETE&name"
-                        method="POST">
-                        <button type="submit">Delete</button>
-                    </form> -->
-
-                    <form style="display: inline" action="/users/<%= id %>/shoppingCart/delete/<%= allLipsticks[i]._id %>?_method=DELETE"
-                        method="POST">
-                        <button type="submit">Delete</button>
-                    </form>
 
                     <a href="/users/<%= id %>/shoppingCart/add/<%= allLipsticks[i]._id %>">
                         <button type="edit">Add to Shopping Cart</button>

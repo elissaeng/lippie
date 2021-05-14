@@ -30,7 +30,11 @@
           <li>
             <a href="/lipsticks/<%= user.shoppingCart[i]._id %>">
               <%= user.shoppingCart[i].lipstickName %>
-            </a>
+            </a> 
+            <form style="display: inline" action="/users/<%= user.id %>/shoppingCart/delete/<%= user.shoppingCart[i]._id %>">
+                
+                <button type="submit">Delete</button>
+            </form>
           </li>
         <% } %>
 
