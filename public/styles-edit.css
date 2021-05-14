@@ -5,6 +5,18 @@ header  {
   font-family: 'Gothic A1', sans-serif;
 }
 
+nav {
+  width: 80vw;
+  
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #DEBFA0;
+}
+
 body {
   background-color: #f2d9e4;
   font-family: 'Gothic A1', sans-serif;

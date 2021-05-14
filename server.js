@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 
 app.set('view engine', 'ejs');
 
+// Middleware
 app.use((req, res, next) => {
     console.log(`${req.method} ${req.originalUrl}`);
 
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
 app.use(express.static('public'))
+
 
 // Home Route
 app.get('/', (req, res) => {
@@ -80,7 +82,6 @@ app.get('/lipsticks/:id/edit', (req, res) => {
 
 // Update lipstick list to the product page
 app.put('/lipsticks/:id', (req, res) => {
-    console.log('stressed and dying')
     db.Lipstick.findByIdAndUpdate(
         req.params.id,
         req.body,
@@ -95,7 +96,7 @@ app.put('/lipsticks/:id', (req, res) => {
 });
 
 
-// Delete
+// Delete Lipstick
 app.delete('/lipsticks/:id', (req, res) => {
     db.Lipstick.findByIdAndDelete(req.params.id, (err, deletedLipstick) => {
         if (err) {
@@ -104,8 +105,6 @@ app.delete('/lipsticks/:id', (req, res) => {
         res.redirect('/lipsticks');
     })
 })
-
-
 
 // Index Route
 app.get('/users', (req, res) => {
@@ -141,12 +140,11 @@ app.get('/users/:id/shoppingCart/add/:lipstickId', (req, res) => {
         db.Lipstick.findById(req.params.lipstickId, (err, foundLipstick) => {
             foundUser.shoppingCart.push(foundLipstick);
             foundUser.save().then(savedUser => {
-                res.redirect(`/users/${req.params.id}`)
-            })
-        })
-    })
-
-})
+                res.redirect(`/users/${req.params.id}`);
+            });
+        });
+    });
+});
 
 app.get('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
     db.User.findById(req.params.id, (err, foundUser) => {
@@ -154,10 +152,26 @@ app.get('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
         foundUser.save().then(savedUser => {
             res.redirect(`/users/${req.params.id}`)
            
-        })
-    })
+        });
+    });
+});
 
-})
+// Delete User
+app.delete('/users/:id', (req, res) => {
+    db.User.findByIdAndDelete(req.params.id, (err, deletedUser) => {
+            res.redirect('/users');
+        });
+    });
+
+// Delete Lipstick
+// app.delete('/lipsticks/:id', (req, res) => {
+//     db.Lipstick.findByIdAndDelete(req.params.id, (err, deletedLipstick) => {
+//         if (err) {
+//             return console.log(err);
+//         }
+//         res.redirect('/lipsticks');
+//     })
+// })
 
 // app.delete('/users/:id/shoppingCart/delete/:lipstickId', (req, res) => {
 //     db.User.findByIdAndUpdate(req.params.id, (err, foundUser) => {

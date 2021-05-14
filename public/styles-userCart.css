@@ -1,4 +1,13 @@
+header  {
+  background-color: #DEA0A0;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Gothic A1', sans-serif;
+}
 
+li {
+  list-style-type: none;
+}
 
 body {
   background-color: #f2d9e4;

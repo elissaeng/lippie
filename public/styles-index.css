@@ -5,6 +5,17 @@ header  {
   font-family: 'Gothic A1', sans-serif;
 }
 
+nav {
+  width: 80vw;
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #DEBFA0;
+}
+
 li {
   list-style-type: none;
 }

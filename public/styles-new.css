@@ -5,6 +5,18 @@ header  {
   text-align: center;
 }
 
+nav {
+  width: 80vw;
+  
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: #DEBFA0;
+}
+
 li {
   list-style-type: none;
   text-align: left;
@@ -16,7 +28,7 @@ body {
   
 }
 
-#purple-cloud {
+/* #purple-cloud {
   position: relative;
   left: 631px;
   bottom: 698px;
@@ -32,7 +44,7 @@ body {
 #white-cloud {
   position: relative;
   bottom: 428px;
-}
+} */
 
 .info {
   text-align: left;
