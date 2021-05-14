@@ -5,12 +5,60 @@ header  {
   font-family: 'Gothic A1', sans-serif;
 }
 
+nav {
+  width: 95vw;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  /* background-color: #DEBFA0; */
+  background-color: #DCDAF2;
+}
+
 li {
   list-style-type: none;
+  padding: 5px;
 }
 
 body {
   background-color: #f2d9e4;
   font-family: 'Gothic A1', sans-serif;
-  
+}
+
+.info {
+  text-align: left;
+  position: relative;
+  bottom: -423px;
+  background-color: #DEA0A0;
+  padding: 29px;
+  border: solid white 5px;
+  border-radius: 5px;
+}
+
+.followus {
+  top: 450px;
+  position: relative;
+  text-align: center;
+  font-family: 'Gothic A1', sans-serif;
+  background-color: #DEBFA0;
+  padding: 2px;
+  border: solid white 5px;
+  border-radius: 5px;
+}
+
+
+#followtext {
+  display: block;
+  bottom: 20px;
+  font-size: 26px;
+  margin-bottom: 2px;
+}
+
+#social {
+  width: 136px;
+  height: 58px;
 }
