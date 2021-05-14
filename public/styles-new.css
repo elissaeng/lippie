@@ -11,6 +11,26 @@ nav {
   margin: 0;
 }
 
+#purple-cloud {
+  position: relative;
+  left: 734px;
+  bottom: 273px;
+}
+
+#white-cloud {
+  position: relative;
+  left: 652px;
+  bottom: 552px;
+}
+
+#pink-cloud {
+  position: relative;
+  left: 153px;
+  bottom: 398px;
+}
+
+
+
 .lip-name {
   margin: 0 auto 12px;
 }
