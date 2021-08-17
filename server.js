@@ -28,7 +28,6 @@ app.get('/', (req, res) => {
 });
 
 
-
 // Index Route
 app.get('/lipsticks', (req, res) => {
     db.Lipstick.find({}, (err, lipsticks) => {
